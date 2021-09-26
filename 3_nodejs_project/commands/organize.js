@@ -4,7 +4,8 @@ function organizeFn(dirPath) {
     let destPath;
     if (dirPath == undefined) {
         destPath = process.cwd();
-        return;
+        //return;
+        // removed the return statement else organizeHelper(dirPath, destPath); won't be called.
     } else {
         let doesExist = fs.existsSync(dirPath);
         if (doesExist) {
